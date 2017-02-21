@@ -242,7 +242,9 @@ public class AVSAudioPlayer {
 
     private void setupAudioPlayer() {
         audioPlayer = new AudioMediaPlayerComponent();
-
+        // Force the volume to a value //
+        audioPlayer.getMediaPlayer().setVolume(100);
+        
         audioPlayer.getMediaPlayer().addMediaPlayerEventListener(new MediaPlayerEventAdapter() {
 
             private boolean playbackStartedSuccessfully;
